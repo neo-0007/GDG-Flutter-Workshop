@@ -1,4 +1,4 @@
-import 'package:dice_roller/dice_roller_page.dart';
+import 'package:dice_roller/pages/dice_roller_page.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {

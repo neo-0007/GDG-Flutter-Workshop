@@ -1,3 +1,4 @@
+import 'package:dice_roller/widgets/roll_button.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -11,8 +12,8 @@ class DiceRollerPage extends StatefulWidget {
 }
 
 class _DiceRollerPageState extends State<DiceRollerPage> {
+  
   int currentDiceValue = 1;
-
   void rollDice() {
     setState(() {
       currentDiceValue = randomizer.nextInt(6) + 1;
@@ -31,22 +32,7 @@ class _DiceRollerPageState extends State<DiceRollerPage> {
             width: 300,
           ),
           SizedBox(height: 20),
-          SizedBox(
-            width: 100,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white70,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              onPressed: rollDice,
-              child: const Text(
-                'ROLL',
-                style: TextStyle(color: Colors.black),
-              ),
-            ),
-          ),
+          RollButton(text: 'ROLL', onTap: rollDice,),
         ],
       ),
     );
