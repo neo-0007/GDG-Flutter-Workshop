@@ -12,7 +12,7 @@ class DiceRollerPage extends StatefulWidget {
 }
 
 class _DiceRollerPageState extends State<DiceRollerPage> {
-  
+
   int currentDiceValue = 1;
   void rollDice() {
     setState(() {
@@ -22,8 +22,10 @@ class _DiceRollerPageState extends State<DiceRollerPage> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.sizeOf(context).width;
+
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 0),
+      padding: EdgeInsets.symmetric(horizontal: screenWidth/3.5, vertical: 0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
