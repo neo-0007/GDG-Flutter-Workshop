@@ -22,10 +22,8 @@ class _DiceRollerPageState extends State<DiceRollerPage> {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.sizeOf(context).width;
 
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: screenWidth/3.5, vertical: 0),
+    return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
